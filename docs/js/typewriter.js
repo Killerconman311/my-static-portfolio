@@ -1,5 +1,5 @@
 class TypeWriter {
-  constructor(txtElement, words, wait = 3000) {
+  constructor(txtElement, words, wait = 1000) {
     this.txtElement = txtElement;
     this.words = words;
     this.txt = '';
@@ -45,7 +45,7 @@ class TypeWriter {
       // Move to next word
       this.wordIndex++;
       // Pause before start typing
-      typeSpeed = 500;
+      typeSpeed = 1000;
     }
 
     setTimeout(() => this.type(), typeSpeed);

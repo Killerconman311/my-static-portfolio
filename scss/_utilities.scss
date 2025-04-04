@@ -1,5 +1,6 @@
+@use 'config' as config; // Import configuration variables
 .container {
-  max-width: $website-width;
+  max-width: config.$website-width;
   padding: 0 1.5rem;
   margin: auto;
   overflow: hidden;
@@ -18,45 +19,45 @@
   &-main {
     @extend %btn-shared;
     color: #333;
-    background-color: $main-color;
+    background-color: config.$main-color;
   }
 
   &-light {
     @extend %btn-shared;
     color: #333;
-    background-color: $light-color;
+    background-color: config.$light-color;
   }
 
   &-dark {
     @extend %btn-shared;
     color: #f4f4f4;
-    background-color: $dark-color;
+    background-color: config.$dark-color;
   }
 }
 
 button[class^='btn-']:hover,
 a[class^='btn-']:hover,
 input[class^='btn-']:hover {
-  background-color: $main-color;
+  background-color: config.$main-color;
 }
 
 // Backgrounds
 .bg {
   &-main {
-    background: $main-color;
-    color: set-text-color($main-color);
+    background: config.$main-color;
+    color: set-text-color(config.$main-color);
   }
   &-dark {
-    background: $dark-color;
-    color: set-text-color($dark-color);
+    background: config.$dark-color;
+    color: set-text-color(config.$dark-color);
   }
   &-light {
-    background: $light-color;
-    color: set-text-color($light-color);
+    background: config.$light-color;
+    color: set-text-color(config.$light-color);
   }
   &-medium {
-    background: $medium-color;
-    color: set-text-color($medium-color);
+    background: config.$medium-color;
+    color: set-text-color(config.$medium-color);
   }
 }
 
@@ -113,7 +114,7 @@ input[class^='btn-']:hover {
 .bottom-line {
   height: 2px;
   width: 3rem;
-  background: $main-color;
+  background: config.$main-color;
   display: block;
   margin: 0 auto 1rem auto;
 }

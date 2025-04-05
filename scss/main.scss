@@ -2,6 +2,7 @@
 @use 'utilities';
 @use 'item_grid';
 @use 'media';
+@use "sass:color"; // Pull in Sass color utilities
 
 // General Styles
 * {
@@ -167,7 +168,8 @@ img {
         right: 0;
         font-size: 28px;
         background: config.$main-color;
-        color: set-text-color(config.$main-color);
+        /* Use the namespace for your function call */
+        color: config.set-text-color(config.$main-color);
         border-radius: 50%;
         height: 15px;
         width: 15px;
@@ -180,7 +182,8 @@ img {
       &-icon {
         border-radius: 50%;
         background: config.$dark-color;
-        color: set-text-color(config.$dark-color);
+        /* Again, call the function via config */
+        color: config.set-text-color(config.$dark-color);
         padding: 2rem;
         width: 70px;
         height: 70px;
@@ -197,7 +200,7 @@ img {
 
           .process-step {
             background: config.$dark-color;
-            color: set-text-color(config.$dark-color);
+            color: config.set-text-color(config.$dark-color);
           }
         }
       }
@@ -247,6 +250,7 @@ img {
       margin: 1rem;
     }
   }
+
   // About B
   &-b {
     .progress {
@@ -264,6 +268,7 @@ img {
       }
     }
   }
+
   // About C
   &-c {
     .about-logos {
@@ -276,6 +281,7 @@ img {
       }
     }
   }
+
   // About D
   &-d {
     .testimonials {
@@ -390,6 +396,3 @@ img {
     }
   }
 }
-
-// Import Media Queries
-@import 'media';

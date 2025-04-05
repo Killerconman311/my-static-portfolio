@@ -1,4 +1,5 @@
-@use 'config' as config; // Import configuration variables
+@use 'config' as config; // Import configuration & function via "config." namespace
+
 .container {
   max-width: config.$website-width;
   padding: 0 1.5rem;
@@ -45,19 +46,22 @@ input[class^='btn-']:hover {
 .bg {
   &-main {
     background: config.$main-color;
-    color: set-text-color(config.$main-color);
+    color: config.set-text-color(config.$main-color);
   }
+
   &-dark {
     background: config.$dark-color;
-    color: set-text-color(config.$dark-color);
+    color: config.set-text-color(config.$dark-color);
   }
+
   &-light {
     background: config.$light-color;
-    color: set-text-color(config.$light-color);
+    color: config.set-text-color(config.$light-color);
   }
+
   &-medium {
     background: config.$medium-color;
-    color: set-text-color(config.$medium-color);
+    color: config.set-text-color(config.$medium-color);
   }
 }
 
